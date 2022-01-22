@@ -83,10 +83,13 @@ public class Main {
         System.out.println(
                 employeeList
                         .stream()
+                        .filter(e->e.getOccupation().equals(Employee.Occupation.STOCKHOLM))
                         .mapToDouble(Employee::getSalary)
                         .summaryStatistics()
                         .getSum()
         );
+
+
 
 
         System.out.println("----");
@@ -173,6 +176,8 @@ public class Main {
                         List.of("Lars", "Mikael")
                 ).flatMap(Collection::stream)
                 .forEach(System.out::println);
+
+
 
     }
 }
