@@ -70,6 +70,7 @@ public class Main {
         System.out.println(
                 employeeList
                         .stream()
+                        .filter(e->e.getOccupation().equals(Employee.Occupation.MALMÖ))
                         .mapToDouble(Employee::getSalary)
                         .summaryStatistics()
                         .getAverage()
